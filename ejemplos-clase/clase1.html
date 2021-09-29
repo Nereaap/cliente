@@ -26,7 +26,28 @@
             console.log(nombre + " tras " + incremento + " años tendrá " + nueva_edad);
         }
 
-        //ejemplo2();
+        function ejemplo3() {
+            let arr = ["1", "10", "100", "1000"];
+            for (let i = 0; i < arr.length && arr[i] < 500; i++) {
+                console.log(i);
+                console.log(arr[i]);
+            }
+        }
+
+        function ejemplo4() {
+            let respuesta;
+            respuesta = confirm("¿Desea cancelar la suscripción?");
+            alert("Usted ha contestado que " + respuesta);
+        }
+
+        function ejemplo5() {
+            let provincia;
+            provincia = prompt("Introduzca la provincia", "");
+            alert("Usted ha introducido la siguiente información: " + provincia);
+            console.log("Operación realizada con éxito");
+        }
+
+        ejemplo5();
     </script>
 </head>
 
