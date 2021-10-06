@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <p id="central"></p>
+    <script type="text/javascript">
+        function ejemplo1() {
+            let marca, modelo, descuento = 0;
+            marca = prompt("Introduce la marca: ", "");
+            if (marca == "Ford") {
+                modelo = prompt("Introduce el modelo: ", "");
+                if (modelo == "Focus") {
+                    descuento = 10;
+                } else if (modelo == "Fiesta") {
+                    descuento = 5;
+                } else {
+                    descuento = 0;
+                }
+            } else {
+                descuento = 0;
+            }
+            document.write("Este modelo tiene un descuento del " + descuento + "%");
+        }
+
+        function ejemplo2() {
+            let origen, destino, descuento = 0;
+            origen = prompt("Introduce la ciudad de origen: ", "");
+            if (origen == "Palma") {
+                destino = prompt("Introduce la ciudad de destino: ", "");
+                if (destino == "Barcelona") {
+                    descuento = 5;
+                } else if (destino == "Madrid") {
+                    descuento = 10;
+                } else if (destino == "Valencia") {
+                    descuento = 15;
+                } else {
+                    descuento = 0;
+                }
+            } else {
+                descuento = 0;
+            }
+            document.write("Este viaje tiene un descuento del " + descuento + "%");
+        }
+
+        function ejemplo3() {
+            for (var i = 5; i > 0; i--) {
+                for (var j = i; j > 0; j--) {
+                    document.write(j + " ")
+                }
+                document.write("<br>")
+            }
+        }
+
+        function ejemplo4() {
+            let x = "<table>";
+            for (var i = 1; i <= 10; i++) {
+                x = x + "<tr>";
+                for (var j = 1; j <= i; j++) {
+                    x = x + '<td> El número es ' + i + ' </td>';
+                }
+                x = x + "</tr>";
+            }
+            x = x + "</table>";
+            document.getElementById("central").innerHTML = x;
+        }
+
+        function ejemplo5() {
+            let x = "<table border=1px cellspacing=0 cellpadding=4>";
+            var num1 = prompt("Introduce un primer número (1-10): ", "");
+            var num2 = prompt("Introduce un segundo número (1-10): ", "");
+            if (num1 > 0 && num1 < 11 && num2 > 0 && num2 < 11) {
+                for (let i = 1; i <= num2; i++) {
+                    x = x + "<tr>";
+                    x = x + '<td>' + num1 + 'x' + i + '</td>';
+                    x = x + '<td> = </td>';
+                    x = x + '<td>' + num1 * i + '</td>';
+                    x = x + "</tr>";
+                }
+                x = x + "</table>";
+            } else {
+                document.write("Tiene que ser un número del 1 al 10");
+            }
+            document.getElementById("central").innerHTML = x;
+
+        }
+        ejemplo5();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
