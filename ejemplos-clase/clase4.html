@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function inicializar() {
+            document.getElementById("crear-ventana-uno").onclick = crearNuevaUno;
+            document.getElementById("cerrar-ventana-uno").onclick = cerrarNuevaUno;
+            document.getElementById("crear-ventana-dos").onclick = crearNuevaDos;
+            document.getElementById("cerrar-ventana-dos").onclick = cerrarNuevaDos;
+            document.getElementById("crear-ventana-tres").onclick = crearNuevaTres;
+            document.getElementById("cerrar-ventana-tres").onclick = cerrarNuevaTres;
+        }
+        var ventanaUno, ventanaDos, ventanaTres;
+
+        function crearNuevaUno() {
+            ventanaUno = window.open("http://www.google.es", "", "height=600,width=800");
+        }
+
+        function crearNuevaDos() {
+            ventanaDos = window.open("http://www.marca.es", "", "height=600,width=800");
+        }
+
+        function crearNuevaTres() {
+            ventanaTres = window.open("http://www.amazon.es", "", "height=600,width=800");
+        }
+
+        function cerrarNuevaUno() {
+            if (ventanaUno) {
+                ventanaUno.close();
+                ventanaUno = null;
+            }
+        }
+
+        function cerrarNuevaDos() {
+            if (ventanaDos) {
+                ventanaDos.close();
+                ventanaDos = null;
+            }
+        }
+
+        function cerrarNuevaTres() {
+            if (ventanaTres) {
+                ventanaTres.close();
+                ventanaTres = null;
+            }
+        }
+    </script>
+</head>
+
+<body onLoad="inicializar()">
+    <h1>Abrimos y cerramos ventanas</h1>
+    <form>
+        <p>
+            <input type="button" id="crear-ventana-uno" value="Crear Ventana 1">
+            <input type="button" id="cerrar-ventana-uno" value="Cerrar Ventana 1">
+        </p>
+        <p>
+            <input type="button" id="crear-ventana-dos" value="Crear Ventana 2">
+            <input type="button" id="cerrar-ventana-dos" value="Cerrar Ventana 2">
+        </p>
+        <p>
+            <input type="button" id="crear-ventana-tres" value="Crear Ventana 3">
+            <input type="button" id="cerrar-ventana-tres" value="Cerrar Ventana 3">
+        </p>
+    </form>
+</body>
+
+</html>

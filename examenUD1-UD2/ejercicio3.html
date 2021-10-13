@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio3</title>
+    <script type="text/javascript">
+        function generarRandom(max) {
+            return Math.floor(Math.random() * max);
+        }
+    </script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var numero = generarRandom(100);
+        var cont = 0;
+        var acertar = false;
+        do {
+            var adivinar = prompt("Adivine el número: " + numero, "");
+            cont++;
+            if (adivinar == numero) {
+                document.write("Adivinaste!!");
+                acertar = true;
+            } else if (cont == 5) {
+                document.write("Se acabaron los intentos, mala suerte. La solución era " + numero);
+            } else {
+                if (adivinar > numero) {
+                    alert("Prueba otra vez, el número es menor");
+                } else {
+                    alert("Prueba otra vez, el número es mayor");
+                }
+
+            }
+        } while (cont != 6 && acertar == false);
+    </script>
+</body>
+
+</html>

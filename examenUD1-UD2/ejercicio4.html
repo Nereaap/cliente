@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio4</title>
+    <script type="text/javascript">
+        function generarRandom(max) {
+            return Math.floor(Math.random() * max + 1);
+        }
+    </script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var saldo = 50;
+        do {
+            var dado = generarRandom(6);
+            var numero = prompt("Elije el numero al que quieres apostar (1-6): " + dado, "");
+            var apuesta = prompt("Su saldo es de " + saldo + ". Elije la cantidad que quieras apostar: ", "");
+            if (numero == dado) {
+                if (saldo + apuesta * 2 > 200) {
+                    alert("No puede apostar esa cantidad porque si gana no se podria sumar.");
+                }
+                saldo += apuesta * 2;
+            } else {
+                saldo -= apuesta;
+            }
+        } while (saldo < 200 && saldo > 0)
+    </script>
+</body>
+
+</html>
