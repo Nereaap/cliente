@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        body {
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #797979;
+        }
+        
+        #cont {
+            width: 693px;
+            margin: 0 auto 0 auto;
+            text-align: left;
+        }
+        
+        #encabezado {
+            height: 32px;
+            margin-bottom: 40px;
+            width: 693px;
+        }
+        
+        #menu {
+            width: 180px;
+            float: left;
+            text-transform: uppercase
+        }
+        
+        #menu h3 {
+            color: red;
+            margin-left: 10px;
+        }
+        
+        #menu ul {
+            list-style: none;
+            /* Quitamos los marcadores */
+            padding: 0;
+            /* Quitamos el padding por defecto de la lista */
+            margin-left: 10px;
+            /* Separamos la lista de la izquierda */
+        }
+        
+        #menu li::before {
+            /* Añadimos contenido antes de cada elemento de la lista */
+            content: "\2022";
+            /* Insertamos el marcador */
+            padding-right: 8px;
+            /* Establecemos el espacio entre las viñetas y el list item */
+            color: red;
+            /* Coloreamos la viñeta */
+            margin-left: 30px;
+            /* Separamos la lista de la izquierda */
+        }
+        
+        #contenido {
+            width: 500px;
+            float: left;
+            margin-bottom: 70px;
+        }
+        
+        #contenido h2 {
+            font-size: 18px;
+            color: #464545;
+            font-weight: normal
+        }
+        
+        #contenido h2 span {
+            color: #a7a7a7;
+        }
+        
+        #contenido p {
+            font-size: 13px;
+        }
+        
+        #pie {
+            clear: both;
+            height: 296px;
+        }
+        
+        #pie h2 {
+            font-size: 18px;
+            color: #464545;
+            font-weight: normal
+        }
+        
+        #pie h2 span {
+            color: #a7a7a7;
+        }
+        
+        #pie p {
+            text-align: center;
+            font-size: 13px;
+            padding-top: 10px;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="cont">
+        <div id="encabezado">
+            <h1>Salamanca Fotografias</h1>
+            <h2>Portafolio Personal</h2>
+        </div>
+        <div id="contenido">
+            <h2>BIENVENIDOS <span>A Mi Sitio Web</span></h2>
+            <p>Soy un amante de la fotografia, en mi tiempo libre me gusta salir con mi camara a capturar esos momentos e imagenes que quiero que queden en mis recuerdos.
+            </p>
+            <p>A lo largo de este sitio encontraras las mejores fotografias que he tomado en los ultimos aÃ±os, podras ver fotos de Paisajes, Animales y Gente. Te invito a que recorras mi sitio web y disfrutes tanto como yo del arte de la fotografia
+            </p>
+        </div>
+        <div id="menu">
+            <h3>Menu</h3>
+            <ul>
+                <li><a>Home</a></li>
+                <li><a>Paisajes</a></li>
+                <li><a>Animales</a></li>
+                <li><a>Gente</a></li>
+                <li><a>Contacto</a></li>
+            </ul>
+        </div>
+        <div id="pie">
+            <h2>ULTIMAS <span>fotografias tomadas</span></h2>
+            <div id="fotos">
+                <div id="foto1">Fotografia 1</div>
+                <div id="foto2">Fotografia 2</div>
+                <div id="foto3">Fotografia 3</div>
+                <div id="foto4">Fotografia 4</div>
+                <div id="foto5">Fotografia 5</div>
+                <div id="foto6">Fotografia 6</div>
+            </div>
+            <p>Todos los derechos reservados // <a>Curso de HTML / CSS</a> <a href="http://www.guachipedia.com">guachipedia.com</a></p>
+        </div>
+    </div>
+</body>
+
+</html>
